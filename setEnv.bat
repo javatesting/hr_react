@@ -1,1 +1,1 @@
-npm install babel-core babel-loader babel-preset-react react react-dom webpack webpack-dev-server babel-preset-es2015 --save 
+npm install babel-core babel-loader babel-preset-react react react-dom webpack webpack-dev-server babel-preset-es2015 --save

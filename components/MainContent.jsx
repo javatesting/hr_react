@@ -13,6 +13,7 @@ import CountrieComponent from './hr/CountrieComponent.jsx';
 import RegionComponent from './hr/RegionComponent.jsx';
 import HistoryComponent from './hr/HistoryComponent.jsx';
 import PersonComponent from './hr/PersonComponent.jsx';
+import HomeComponent from './hr/HomeComponent.jsx';
 
 
 class MainContent extends Component {
@@ -22,7 +23,7 @@ class MainContent extends Component {
         return (
           <div>
               <Switch>
-                  <Route exact path='/' component={EmployeeComponent}/>
+                  <Route exact path='/' component={HomeComponent}/>
                   <Route path='/employees' component={EmployeeComponent}/>
                   <Route path='/countries' component={CountrieComponent}/>
                   <Route path='/departments' component={DepartmentComponent}/>

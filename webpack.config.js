@@ -13,7 +13,9 @@ var config = {
    //    path: __dirname + './',
    //    filename: 'bundle.js',
    // },
-	
+
+    devtool: '#inline-source-map',
+
    devServer: {
       inline: true,
       port: 8080

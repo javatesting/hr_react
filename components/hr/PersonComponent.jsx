@@ -3,7 +3,8 @@
  */
 
 import React, {Component} from 'react';
-import TableComponent from './../TableComponent.jsx';
+//import TableComponent from './../TableComponent.jsx';
+import CustomTableComponent from './../CustomTableComponent.jsx';
 import {BASE_URL} from '../utils/utils';
 import axios from 'axios';
 
@@ -22,6 +23,21 @@ class PersonComponent extends Component {
         }
     }
 
+/**
+ *
+ *
+ *
+ */
+ getHeaders() {
+    return [
+        "PERSON ID",
+        "NAME"
+    ];
+}
+
+getFields() {
+    return ["person_id", "name"]
+}
 
     componentDidMount() {
         axios
@@ -39,9 +55,11 @@ class PersonComponent extends Component {
 
         return (
             <div>
-                <TableComponent
-                    colnames={this.state.columnNameHeaders}
-                    datatable={this.state.data} />
+                <CustomTableComponent
+                    columnNamesAttr={this.getHeaders()}
+                    fieldNamesAttr={this.getFields()}
+                    dataAttr={this.state.data}
+                    />
             </div>
         );
     }

@@ -3,7 +3,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --hot"
+    "start": "webpack-dev-server --hot",
+    "pack":"webpack"
   },
   "dependencies": {
     "axios": "^0.16.2",

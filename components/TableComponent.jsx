@@ -2,6 +2,9 @@
  * Created by nik on 02.07.2017.
  */
 import React, {Component} from 'react';
+import {
+    Link
+} from 'react-router-dom';
 
 class TableComponent extends Component {
     constructor(props){
@@ -43,6 +46,21 @@ class TableComponent extends Component {
     }
 }
 
+class InfoComponent extends Component {
+    constructor(props) {
+        super(props);
+
+    }
+
+    render () {
+        return (
+            <td>
+                <Link to={`/person/${this.state.dataRow.person_id}`} >INFO</Link>
+            </td>
+        );
+    }
+}
+
 class TableRowComponent extends Component {
     constructor(props) {
         super(props);
@@ -56,9 +74,13 @@ class TableRowComponent extends Component {
         return (
             <tr>
                 {
+
                     this.state
                         .keys
-                        .map((item, i) => <td key={i}>{this.state.dataRow[item]}</td>)
+                        .map((item, i) => {
+                           return <td key={i}>{this.state.dataRow[item]}</td>
+                        })
+
                 }
             </tr>
         );

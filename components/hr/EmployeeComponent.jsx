@@ -4,6 +4,7 @@
 
 import React, {Component} from 'react';
 import TableComponent from './../TableComponent.jsx';
+import CustomTableComponent from './../CustomTableComponent.jsx';
 import {BASE_URL} from '../utils/utils';
 
 class EmployeeComponent extends Component {
@@ -18,6 +19,7 @@ class EmployeeComponent extends Component {
                 "MANAGER ID", "DEPARTMENT ID"
             ]
         }
+
     }
 
     componentDidMount() {
@@ -35,9 +37,11 @@ class EmployeeComponent extends Component {
 
         return (
             <div>
-                <TableComponent
-                    colnames={this.state.columnNameHeaders}
-                    datatable={this.state.data} />
+                <CustomTableComponent
+                    columnNamesAttr={["FIRST NAME", "LAST NAME"]}
+                    fieldNamesAttr={["first_name","last_name"]}
+                    dataAttr={this.state.data}
+                />
             </div>
         );
     }

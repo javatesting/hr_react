@@ -3,8 +3,8 @@
  */
 
 import React, {Component} from 'react';
-import TableComponent from './../TableComponent.jsx';
-import CustomTableComponent from './../CustomTableComponent.jsx';
+import TableComponent from '../common/TableComponent.jsx';
+import CustomTableComponent from '../common/CustomTableComponent.jsx';
 import {BASE_URL} from '../utils/utils';
 
 class EmployeeComponent extends Component {

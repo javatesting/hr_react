@@ -5,15 +5,15 @@
 import React, {Component} from 'react';
 import {Switch, Route} from 'react-router-dom';
 
-import JobComponent from './hr/JobComponent.jsx';
-import DepartmentComponent from './hr/DepartmentComponent.jsx';
-import EmployeeComponent from './hr/EmployeeComponent.jsx';
-import LocationComponent from './hr/LocationComponent.jsx';
-import CountrieComponent from './hr/CountrieComponent.jsx';
-import RegionComponent from './hr/RegionComponent.jsx';
-import HistoryComponent from './hr/HistoryComponent.jsx';
-import PersonComponent from './hr/PersonComponent.jsx';
-import HomeComponent from './hr/HomeComponent.jsx';
+import JobComponent from '../hr/JobComponent.jsx';
+import DepartmentComponent from '../hr/DepartmentComponent.jsx';
+import EmployeeComponent from '../hr/EmployeeComponent.jsx';
+import LocationComponent from '../hr/LocationComponent.jsx';
+import CountrieComponent from '../hr/CountrieComponent.jsx';
+import RegionComponent from '../hr/RegionComponent.jsx';
+import HistoryComponent from '../hr/HistoryComponent.jsx';
+import PersonComponent from '../hr/PersonComponent.jsx';
+import HomeComponent from '../hr/HomeComponent.jsx';
 
 
 class MainContent extends Component {

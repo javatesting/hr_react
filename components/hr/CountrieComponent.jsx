@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react';
-import TableComponent from './../TableComponent.jsx';
+import TableComponent from '../common/TableComponent.jsx';
 import {BASE_URL} from '../utils/utils';
 
 class CountrieComponent extends Component {

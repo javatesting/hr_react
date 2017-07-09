@@ -1,7 +1,7 @@
 ﻿import React, {Component} from 'react';
-import TopNavBar from './components/TopNavBar.jsx';
-import SideNavBar from './components/SideNavBar.jsx';
-import MainContent from './components/MainContent.jsx'
+import TopNavBar from './components/common/TopNavBar.jsx';
+import SideNavBar from './components/common/SideNavBar.jsx';
+import MainContent from './components/common/MainContent.jsx'
 
 class HR extends Component {
 

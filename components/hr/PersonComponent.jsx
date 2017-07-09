@@ -4,7 +4,7 @@
 
 import React, {Component} from 'react';
 //import TableComponent from './../TableComponent.jsx';
-import CustomTableComponent from './../CustomTableComponent.jsx';
+import CustomTableComponent from '../common/CustomTableComponent.jsx';
 import {BASE_URL} from '../utils/utils';
 import axios from 'axios';
 

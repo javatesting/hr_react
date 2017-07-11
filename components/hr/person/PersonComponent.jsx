@@ -4,22 +4,15 @@
 
 import React, {Component} from 'react';
 //import TableComponent from './../TableComponent.jsx';
-import CustomTableComponent from '../common/CustomTableComponent.jsx';
-import {BASE_URL} from '../utils/utils';
+import CustomTableComponent from '../../common/CustomTableComponent.jsx';
+import {BASE_URL} from '../../utils/utils';
 import axios from 'axios';
 
 class PersonComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: null,
-            columnNameHeaders: [
-                "PERSON ID",
-                "NAME",
-                "LAST NAME",
-                "AGE"
-
-            ]
+            data: null
         }
     }
 
@@ -35,8 +28,25 @@ class PersonComponent extends Component {
     ];
 }
 
+    /**
+     *
+     *
+     *
+     */
 getFields() {
     return ["person_id", "name"]
+}
+
+    /**
+     *
+     *
+     *
+     */
+getInfo() {
+    return {
+        "url":"/persona",
+        "idEntity":"person_id"
+    }
 }
 
     componentDidMount() {
@@ -59,6 +69,7 @@ getFields() {
                     columnNamesAttr={this.getHeaders()}
                     fieldNamesAttr={this.getFields()}
                     dataAttr={this.state.data}
+                    infoAttr={this.getInfo()}
                     />
             </div>
         );

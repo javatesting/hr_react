@@ -12,7 +12,7 @@ import LocationComponent from '../hr/LocationComponent.jsx';
 import CountrieComponent from '../hr/CountrieComponent.jsx';
 import RegionComponent from '../hr/RegionComponent.jsx';
 import HistoryComponent from '../hr/HistoryComponent.jsx';
-import PersonComponent from '../hr/PersonComponent.jsx';
+import PersonComponent from '../hr/person/PersonComponent.jsx';
 import HomeComponent from '../hr/HomeComponent.jsx';
 
 

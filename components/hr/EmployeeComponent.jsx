@@ -3,7 +3,6 @@
  */
 
 import React, {Component} from 'react';
-import TableComponent from '../common/TableComponent.jsx';
 import CustomTableComponent from '../common/CustomTableComponent.jsx';
 import {BASE_URL} from '../utils/utils';
 
@@ -12,12 +11,7 @@ class EmployeeComponent extends Component {
         super(props);
         this.state = {
             data: null,
-            columnNameHeaders: [
-                "EMPLOYEE ID", "FIRST NAME", "LAST NAME",
-                "EMAIL", "PHONE NUMBER", "HIRE DATE",
-                "JOB ID", "SALARY", "COMMISSION PCT",
-                "MANAGER ID", "DEPARTMENT ID"
-            ]
+
         }
 
     }
@@ -41,6 +35,7 @@ class EmployeeComponent extends Component {
                     columnNamesAttr={["FIRST NAME", "LAST NAME"]}
                     fieldNamesAttr={["first_name","last_name"]}
                     dataAttr={this.state.data}
+                    infoAttr={{"url":"/employee", "idEntity":"employee_id"}}
                 />
             </div>
         );

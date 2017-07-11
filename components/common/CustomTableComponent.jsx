@@ -3,6 +3,7 @@
  */
 
 import React, {Component} from 'react';
+import LinkToInfo from '../common/LinkToInfo.jsx';
 
 class CustomTableComponent extends Component {
     constructor(props){
@@ -10,7 +11,8 @@ class CustomTableComponent extends Component {
         this.state = {
             columnNamesField: this.props.columnNamesAttr,
             fieldNamesField: this.props.fieldNamesAttr,
-            dataField: this.props.dataAttr
+            dataField: this.props.dataAttr,
+            infoField: this.props.infoAttr
         }
     }
 
@@ -29,6 +31,7 @@ class CustomTableComponent extends Component {
                                                     key={i}
                                                     fieldNamesAttr={this.state.fieldNamesField}
                                                     dataAttr={item}
+                                                    infoAttr={this.state.infoField}
                                                 />)
                     }
                     </tbody>
@@ -66,7 +69,8 @@ class RowTableComponent extends Component {
         super(props);
         this.state = {
             fieldNamesField: this.props.fieldNamesAttr,
-            dataField: this.props.dataAttr
+            dataField: this.props.dataAttr,
+            infoField: this.props.infoAttr
         }
     }
 
@@ -80,6 +84,10 @@ class RowTableComponent extends Component {
                         .fieldNamesField
                         .map( (item, i) => <td key={i}>{this.state.dataField[item]}</td>)
                 }
+                <LinkToInfo
+                    urlAttr={this.state.infoField.url}
+                    valueAttr={this.state.dataField[this.state.infoField.idEntity]}
+                />
             </tr>
         );
     }

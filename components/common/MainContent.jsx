@@ -6,13 +6,18 @@ import React, {Component} from 'react';
 import {Switch, Route} from 'react-router-dom';
 
 import JobComponent from '../hr/job/JobComponent.jsx';
+
 import DepartmentComponent from '../hr/department/DepartmentComponent.jsx';
+import DepartmentInfoComponent from '../hr/department/DepartmentInfoComponent.jsx';
 
 import EmployeeComponent from '../hr/employee/EmployeeComponent.jsx';
 import EmployeeInfoComponent from  '../hr/employee/EmployeeInfoComponent.jsx';
 
 import LocationComponent from '../hr/location/LocationComponent.jsx';
+
 import CountrieComponent from '../hr/countrie/CountrieComponent.jsx';
+import CountrieInfoComponent from '../hr/countrie/CountrieInfoComponent.jsx';
+
 import RegionComponent from '../hr/region/RegionComponent.jsx';
 import HistoryComponent from '../hr/history/HistoryComponent.jsx';
 
@@ -34,7 +39,11 @@ class MainContent extends Component {
                   <Route path='/employee/:idEntity' component={EmployeeInfoComponent}/>
 
                   <Route path='/countries' component={CountrieComponent}/>
+                  <Route path='/countrie/:idEntity' component={CountrieInfoComponent}/>
+
                   <Route path='/departments' component={DepartmentComponent}/>
+                  <Route path='/department/:idEntity' component={DepartmentInfoComponent}/>
+
                   <Route path='/jobs' component={JobComponent}/>
                   <Route path='/locations' component={LocationComponent}/>
                   <Route path='/regions' component={RegionComponent}/>

@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react';
-import TableComponent from '../../common/TableComponent.jsx';
+import CustomTableComponent from '../../common/CustomTableComponent.jsx';
 import {BASE_URL} from '../../utils/utils';
 
 class CountrieComponent extends Component {
@@ -32,9 +32,12 @@ class CountrieComponent extends Component {
 
         return (
             <div>
-                <TableComponent
-                    colnames={this.state.columnNameHeaders}
-                    datatable={this.state.data} />
+                <CustomTableComponent
+                    columnNamesAttr={["COUNTRY NAME", "REGION_ID"]}
+                    fieldNamesAttr={["country_name","region_id"]}
+                    dataAttr={this.state.data}
+                    infoAttr={{"url":"/countrie", "idEntity":"country_id"}}
+                />
             </div>
         );
     }

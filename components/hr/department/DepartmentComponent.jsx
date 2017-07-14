@@ -3,28 +3,22 @@
  */
 
 import React, {Component} from 'react';
-import TableComponent from '../../common/TableComponent.jsx';
+import CustomTableComponent from '../../common/CustomTableComponent.jsx';
 import {BASE_URL} from '../../utils/utils';
 
 class DepartmentComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: null,
-            columnNameHeaders: [
-                "DEPARTMENT ID",
-                "DEPARTMENT NAME",
-                "MANAGER ID",
-                "LOCATION ID"
-            ]
+            data: null
         }
 
     }
 
     componentDidMount() {
         fetch(BASE_URL + 'departments')
-            .then(response => response.json())
-            .then((data) => {
+            .then(res => res.json())
+            .then(data => {
                 this.setState({ data: data });
             });
     }
@@ -37,9 +31,12 @@ class DepartmentComponent extends Component {
 
         return (
             <div>
-                <TableComponent
-                    colnames={this.state.columnNameHeaders}
-                    datatable={this.state.data} />
+                <CustomTableComponent
+                    columnNamesAttr={["DEPARTMENT NAME", "DEPARTMENT ID"]}
+                    fieldNamesAttr={["department_name","department_id"]}
+                    dataAttr={this.state.data}
+                    infoAttr={{"url":"/department", "idEntity":"department_id"}}
+                />
             </div>
         );
     }

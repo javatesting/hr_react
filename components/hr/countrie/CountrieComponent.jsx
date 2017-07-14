@@ -3,36 +3,31 @@
  */
 
 import React, {Component} from 'react';
-import TableComponent from '../common/TableComponent.jsx';
-import {BASE_URL} from '../utils/utils';
+import TableComponent from '../../common/TableComponent.jsx';
+import {BASE_URL} from '../../utils/utils';
 
-class DepartmentComponent extends Component {
+class CountrieComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
             data: null,
             columnNameHeaders: [
-                "DEPARTMENT ID",
-                "DEPARTMENT NAME",
-                "MANAGER ID",
-                "LOCATION ID"
+                "COUNTRY ID", "COUNTRY NAME", "REGION ID"
             ]
         }
-
     }
 
     componentDidMount() {
-        fetch(BASE_URL + 'departments')
+        fetch(BASE_URL + 'countries')
             .then(response => response.json())
             .then((data) => {
                 this.setState({ data: data });
             });
     }
 
-
     render() {
         if (!this.state.data) {
-            return <div>Loading...</div>;
+            return <div>Loading</div>;
         }
 
         return (
@@ -44,4 +39,4 @@ class DepartmentComponent extends Component {
         );
     }
 }
-export default DepartmentComponent;
+export default CountrieComponent;

@@ -21,7 +21,7 @@ class LinkToInfo extends Component {
     render() {
         return (
           <td>
-              <Link  to={this.goTo()}>INFO</Link>
+              <Link to={this.goTo()}>INFO</Link>
           </td>
         );
     }

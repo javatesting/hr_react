@@ -3,27 +3,22 @@
  */
 
 import React, {Component} from 'react';
-import TableComponent from '../common/TableComponent.jsx';
-import {BASE_URL} from '../utils/utils';
-class LocationComponent extends Component {
+import TableComponent from '../../common/TableComponent.jsx';
+import {BASE_URL} from '../../utils/utils';
+
+class JobComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
             data: null,
             columnNameHeaders: [
-                'ID',
-                'STREET ADDRESS',
-                'POSTAL CODE',
-                'CITY',
-                'STATE PROVINCE',
-                'COUNTRY ID'
+                "JOB ID", "JOB TITLE", "MIN SALARY", "MAX SALARY"
             ]
         }
     }
 
-
     componentDidMount() {
-        fetch(BASE_URL + 'locations')
+        fetch(BASE_URL + 'jobs')
             .then(response => response.json())
             .then((data) => {
                 this.setState({ data: data });
@@ -44,4 +39,5 @@ class LocationComponent extends Component {
         );
     }
 }
-export default LocationComponent;
+
+export default JobComponent;

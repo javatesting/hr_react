@@ -16,7 +16,7 @@ class TopNavBar extends Component {
                                 <span className="icon-bar"></span>
                                 <span className="icon-bar"></span>
                             </button>
-                            <a className="navbar-brand" href="#">HUMAN RESOURCES</a>
+                            <a className="navbar-brand" href="#">HUMAN RESOURCES  (REACT)</a>
                         </div>
                         <div id="navbar" className="navbar-collapse collapse">
                             <ul className="nav navbar-nav navbar-right">

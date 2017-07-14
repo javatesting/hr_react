@@ -3,35 +3,32 @@
  */
 
 import React, {Component} from 'react';
-import TableComponent from '../common/TableComponent.jsx';
-import {BASE_URL} from '../utils/utils';
+import TableComponent from '../../common/TableComponent.jsx';
+import {BASE_URL} from '../../utils/utils';
 
-class HistoryComponent extends Component {
+class RegionComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
             data: null,
             columnNameHeaders: [
-                "EMPLOYEE ID", "START DATE",
-                "END DATE", "JOB ID",
-                "DEPARTMENT ID"
+                'ID',
+                'REGION NAME'
             ]
         }
     }
 
-
     componentDidMount() {
-        fetch(BASE_URL + 'history')
+        fetch(BASE_URL + 'regions')
             .then(response => response.json())
             .then((data) => {
                 this.setState({ data: data });
             });
     }
 
-
     render() {
         if (!this.state.data) {
-            return <div>Loading...</div>;
+            return <div>Loading</div>;
         }
 
         return (
@@ -43,4 +40,4 @@ class HistoryComponent extends Component {
         );
     }
 }
-export default HistoryComponent;
+export default RegionComponent;

@@ -3,7 +3,6 @@
  */
 
 import React, {Component} from 'react';
-//import TableComponent from './../TableComponent.jsx';
 import CustomTableComponent from '../../common/CustomTableComponent.jsx';
 import {BASE_URL} from '../../utils/utils';
 import axios from 'axios';
@@ -16,35 +15,19 @@ class PersonComponent extends Component {
         }
     }
 
-/**
- *
- *
- *
- */
+
  getHeaders() {
-    return [
-        "PERSON ID",
-        "NAME"
-    ];
+    return ["PERSON ID", "NAME" ];
 }
 
-    /**
-     *
-     *
-     *
-     */
 getFields() {
     return ["person_id", "name"]
 }
 
-    /**
-     *
-     *
-     *
-     */
+
 getInfo() {
     return {
-        "url":"/persona",
+        "url":"/person",
         "idEntity":"person_id"
     }
 }

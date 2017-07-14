@@ -74,6 +74,10 @@ class RowTableComponent extends Component {
         }
     }
 
+    getValue() {
+        let idEntity = this.state.infoField.idEntity;
+        return this.state.dataField[idEntity];
+    }
     render()
     {
 
@@ -86,7 +90,7 @@ class RowTableComponent extends Component {
                 }
                 <LinkToInfo
                     urlAttr={this.state.infoField.url}
-                    valueAttr={this.state.dataField[this.state.infoField.idEntity]}
+                    valueAttr={this.getValue()}
                 />
             </tr>
         );

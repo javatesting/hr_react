@@ -14,7 +14,8 @@ import DepartmentInfoComponent from '../hr/department/DepartmentInfoComponent.js
 import EmployeeComponent from '../hr/employee/EmployeeComponent.jsx';
 import EmployeeInfoComponent from  '../hr/employee/EmployeeInfoComponent.jsx';
 
-import LocationComponent from '../hr/location/LocationComponent.jsx';
+import LocationComponent from '../hr/location/LocationComponent';
+import LocationInfoComponent from '../hr/location/LocationInfoComponent';
 
 import CountrieComponent from '../hr/countrie/CountrieComponent.jsx';
 import CountrieInfoComponent from '../hr/countrie/CountrieInfoComponent.jsx';
@@ -22,8 +23,8 @@ import CountrieInfoComponent from '../hr/countrie/CountrieInfoComponent.jsx';
 import RegionComponent from '../hr/region/RegionComponent.jsx';
 import HistoryComponent from '../hr/history/HistoryComponent.jsx';
 
-import PersonComponent from '../hr/person/PersonComponent.jsx';
-import PersonInfoComponent from '../hr/person/PersonInfoComponent.jsx';
+import PersonComponent from '../hr/person/PersonComponent';
+import PersonInfoComponent from '../hr/person/PersonInfoComponent';
 
 import HomeComponent from '../hr/HomeComponent.jsx';
 
@@ -49,6 +50,8 @@ class MainContent extends Component {
                   <Route path='/job/:idEntity' component={JobInfoComponent}/>
 
                   <Route path='/locations' component={LocationComponent}/>
+                  <Route path='/location/:idEntity' component={LocationInfoComponent}/>
+
                   <Route path='/regions' component={RegionComponent}/>
                   <Route path='/history' component={HistoryComponent}/>
 

@@ -3,21 +3,14 @@
  */
 
 import React, {Component} from 'react';
-import TableComponent from '../../common/TableComponent.jsx';
+import CustomTableComponent from '../../common/CustomTableComponent.js';
 import {BASE_URL} from '../../utils/utils';
 class LocationComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: null,
-            columnNameHeaders: [
-                'ID',
-                'STREET ADDRESS',
-                'POSTAL CODE',
-                'CITY',
-                'STATE PROVINCE',
-                'COUNTRY ID'
-            ]
+            data: null
+
         }
     }
 
@@ -37,9 +30,12 @@ class LocationComponent extends Component {
 
         return (
             <div>
-                <TableComponent
-                    colnames={this.state.columnNameHeaders}
-                    datatable={this.state.data} />
+                <CustomTableComponent
+                    columnNamesAttr={["CITY"]}
+                    fieldNamesAttr={["city"]}
+                    dataAttr={this.state.data}
+                    infoAttr={{"url":"/location", "idEntity":"location_id"}}
+                />
             </div>
         );
     }

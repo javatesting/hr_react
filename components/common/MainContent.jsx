@@ -6,6 +6,7 @@ import React, {Component} from 'react';
 import {Switch, Route} from 'react-router-dom';
 
 import JobComponent from '../hr/job/JobComponent.jsx';
+import JobInfoComponent from '../hr/job/JobInfoComponent.jsx';
 
 import DepartmentComponent from '../hr/department/DepartmentComponent.jsx';
 import DepartmentInfoComponent from '../hr/department/DepartmentInfoComponent.jsx';
@@ -45,6 +46,8 @@ class MainContent extends Component {
                   <Route path='/department/:idEntity' component={DepartmentInfoComponent}/>
 
                   <Route path='/jobs' component={JobComponent}/>
+                  <Route path='/job/:idEntity' component={JobInfoComponent}/>
+
                   <Route path='/locations' component={LocationComponent}/>
                   <Route path='/regions' component={RegionComponent}/>
                   <Route path='/history' component={HistoryComponent}/>

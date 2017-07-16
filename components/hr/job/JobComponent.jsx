@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react';
-import TableComponent from '../../common/TableComponent.jsx';
+import CustomTableComponent from '../../common/CustomTableComponent.jsx';
 import {BASE_URL} from '../../utils/utils';
 
 class JobComponent extends Component {
@@ -32,9 +32,12 @@ class JobComponent extends Component {
 
         return (
             <div>
-                <TableComponent
-                    colnames={this.state.columnNameHeaders}
-                    datatable={this.state.data} />
+                <CustomTableComponent
+                    columnNamesAttr={["JOB ID", "JOB TITLE"]}
+                    fieldNamesAttr={["job_title","job_id"]}
+                    dataAttr={this.state.data}
+                    infoAttr={{"url":"/job", "idEntity":"job_id"}}
+                />
             </div>
         );
     }

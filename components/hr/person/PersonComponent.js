@@ -3,8 +3,9 @@
  */
 
 import React, {Component} from 'react';
-import CustomTableComponent from '../../common/CustomTableComponent.js';
+import CustomTableComponent from '../../common/CustomTableComponent';
 import {BASE_URL} from '../../utils/utils';
+import CreateButtonComponent from '../../common/CreateButtonComponent'
 import axios from 'axios';
 
 class PersonComponent extends Component {
@@ -46,6 +47,7 @@ getInfo() {
             return <div>Loading</div>;
         }
 
+
         return (
             <div>
                 <CustomTableComponent
@@ -54,7 +56,9 @@ getInfo() {
                     dataAttr={this.state.data}
                     infoAttr={this.getInfo()}
                     />
+                <CreateButtonComponent link="/person_new" other={this.props.history}/>
             </div>
+
         );
     }
 }

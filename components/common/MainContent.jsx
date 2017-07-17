@@ -27,6 +27,7 @@ import HistoryComponent from '../hr/history/HistoryComponent.jsx';
 
 import PersonComponent from '../hr/person/PersonComponent';
 import PersonInfoComponent from '../hr/person/PersonInfoComponent';
+import PersonNewComponent from '../hr/person/PersonNewComponent';
 
 import HomeComponent from '../hr/HomeComponent.jsx';
 
@@ -61,6 +62,7 @@ class MainContent extends Component {
 
                   <Route path='/persons' component={PersonComponent}/>
                   <Route path='/person/:idEntity' component={PersonInfoComponent}/>
+                  <Route path='/person_new'  component={PersonNewComponent} />
               </Switch>
           </div>
         );

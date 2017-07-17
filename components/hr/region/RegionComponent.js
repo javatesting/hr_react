@@ -3,18 +3,15 @@
  */
 
 import React, {Component} from 'react';
-import TableComponent from '../../common/TableComponent.jsx';
+import CustomTableComponent from '../../common/CustomTableComponent';
 import {BASE_URL} from '../../utils/utils';
 
 class RegionComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: null,
-            columnNameHeaders: [
-                'ID',
-                'REGION NAME'
-            ]
+            data: null
+
         }
     }
 
@@ -33,9 +30,12 @@ class RegionComponent extends Component {
 
         return (
             <div>
-                <TableComponent
-                    colnames={this.state.columnNameHeaders}
-                    datatable={this.state.data} />
+                <CustomTableComponent
+                    columnNamesAttr={["REGION NAME"]}
+                    fieldNamesAttr={["region_name"]}
+                    dataAttr={this.state.data}
+                    infoAttr={{"url":"/region", "idEntity":"region_id"}}
+                />
             </div>
         );
     }

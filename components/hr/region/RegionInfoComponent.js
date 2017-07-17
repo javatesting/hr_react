@@ -35,7 +35,14 @@ class RegionInfoComponent extends Component {
             <div className="table-responsive" style={{width: '30%'}}>
                 <table className="table table-bordered">
                     <tbody>
-
+                        <tr>
+                            <td>REGION ID</td>
+                            <td>{this.state.region.region_id}</td>
+                        </tr>
+                        <tr>
+                            <td>REGION NAME</td>
+                            <td>{this.state.region.region_name}</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

@@ -20,7 +20,9 @@ import LocationInfoComponent from '../hr/location/LocationInfoComponent';
 import CountrieComponent from '../hr/countrie/CountrieComponent.jsx';
 import CountrieInfoComponent from '../hr/countrie/CountrieInfoComponent.jsx';
 
-import RegionComponent from '../hr/region/RegionComponent.jsx';
+import RegionComponent from '../hr/region/RegionComponent';
+import RegionInfoComponent from '../hr/region/RegionInfoComponent';
+
 import HistoryComponent from '../hr/history/HistoryComponent.jsx';
 
 import PersonComponent from '../hr/person/PersonComponent';
@@ -53,6 +55,8 @@ class MainContent extends Component {
                   <Route path='/location/:idEntity' component={LocationInfoComponent}/>
 
                   <Route path='/regions' component={RegionComponent}/>
+                  <Route path='/region/:idEntity' component={RegionInfoComponent}/>
+
                   <Route path='/history' component={HistoryComponent}/>
 
                   <Route path='/persons' component={PersonComponent}/>
